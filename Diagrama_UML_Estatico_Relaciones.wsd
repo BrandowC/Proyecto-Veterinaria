@@ -1,0 +1,45 @@
+@startuml
+class Cliente {
+    - idCliente: int
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    + AgregarCliente()
+    + obtenerCliente()
+    + mascota: Mascota
+}
+
+class Mascota {
+    - idMascota: int
+    - nombre: String
+    - especie: String
+    - raza: String
+    - edad: int
+    + AgregarMascota()
+    + obtenerMascota()
+}
+
+class Veterinario {
+    - idVeterinario: int
+    - nombre: String
+    - especialidad: String
+    - telefono: String
+    + agregarVeterinario()
+    + obtenerVeterinario()
+}
+
+class Consulta {
+    - idConsulta: int
+    - fecha: Date
+    - diagnostico: String
+    - tratamiento: String
+    + RegistrarConsulta()
+    + obtenerConsulta()
+}
+
+Cliente "1" -- "0..*" Mascota : tiene_clientes
+Veterinario "1" -- "0..*" Consulta : realiza_Registro
+Consulta "1" -- "1" Mascota : consulta_Mascota
+Consulta "1" -- "1" Cliente : para_cliente
+Consulta "1" -- "1" Veterinario : atendida por_veterinario
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+|Veterinario|
+start
+:Introducir datos de consulta;
+|Controlador|
+:Recibir datos;
+|Servicio|
+:Guardar datos en la base de datos;
+stop
+@enduml

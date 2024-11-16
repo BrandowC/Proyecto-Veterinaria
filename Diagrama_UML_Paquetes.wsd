@@ -1,0 +1,29 @@
+@startuml
+package "Clientes" {
+    class "ControladorCliente"
+    class "ServicioCliente"
+    class "RepositorioCliente"
+    class "ModeloCliente"
+}
+
+package "Mascotas" {
+    class "ControladorMascota"
+    class "ServicioMascota"
+    class "RepositorioMascota"
+    class "ModeloMascota"
+}
+
+package "Veterinarios" {
+    class "ControladorVeterinario"
+    class "ServicioVeterinario"
+    class "RepositorioVeterinario"
+    class "ModeloVeterinario"
+}
+
+package "Consultas" {
+    class "ControladorConsulta"
+    class "ServicioConsulta"
+    class "RepositorioConsulta"
+    class "ModeloConsulta"
+}
+@enduml

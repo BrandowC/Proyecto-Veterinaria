@@ -1,0 +1,13 @@
+@startuml
+actor "Veterinario" as Vet
+participant "Controlador" as Ctrl
+participant "Servicio" as Serv
+participant "Repositorio" as Repo
+
+Vet -> Ctrl : Introducir datos de consulta
+Ctrl -> Serv : Pasar datos de consulta
+Serv -> Repo : Guardar consulta
+Repo --> Serv : Confirmación de guardado
+Serv --> Ctrl : Confirmación de guardado
+Ctrl --> Vet : Confirmación de registro
+@enduml
